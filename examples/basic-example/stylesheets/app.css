@@ -11,10 +11,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.form-content{
+  display : flex;
+  justify-content: space-between;
+  align-items: stretch
+
+}
+
+.form-element{
+    width:250px
+}
+
+.maxdepth{
+    width:25px
+}
+
 /**
  * Uncomment to simulate bootstrap environment
  */
-/*
+
 html {
     box-sizing: border-box;
 }
@@ -22,4 +37,3 @@ html {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-*/

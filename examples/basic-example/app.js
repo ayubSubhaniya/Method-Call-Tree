@@ -129,7 +129,7 @@ class App extends Component {
       xmlhttp.open("PUT", url, true);
       xmlhttp.onreadystatechange = function () {
         if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            this.updateTreeData;
+            
         }
       };
       xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
