@@ -1,0 +1,603 @@
+[{
+    "noDragging": "true",
+    "children": [
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [{
+                  "noDragging": "true",
+                  "children": [{
+                    "noDragging": "true",
+                    "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;Ljava/util/Map;)V",
+                    "id": 5,
+                    "title": "RequestContext@<init> 40"
+                  }],
+                  "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;)V",
+                  "id": 4,
+                  "title": "RequestContext@<init> 38"
+                }],
+                "subtitle": "()Lcom/spr/utils/core/RequestContext;",
+                "id": 3,
+                "title": "RequestContextProvider@getContext 21"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "()Ljava/lang/String;",
+                "id": 6,
+                "title": "AdditionalDataKey@getKey 21(2)"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "(Ljava/lang/String;Ljava/lang/String;)V",
+                "id": 7,
+                "title": "RequestContext@addAdditional 21(4)"
+              }
+            ],
+            "subtitle": "(Lcom/spr/operationmode/OperationMode;)V",
+            "id": 2,
+            "title": "ServiceSubstitutionFactory@setOperationMode 274"
+          },
+          {
+            "noDragging": "true",
+            "children": [{
+              "noDragging": "true",
+              "children": [
+                {
+                  "noDragging": "true",
+                  "children": [{
+                    "noDragging": "true",
+                    "subtitle": "(Ljava/lang/Object;)Ljava/lang/Object;",
+                    "id": 11,
+                    "title": "LazyInitializer@getOrCreate 30"
+                  }],
+                  "subtitle": "()Ljava/lang/Object;",
+                  "id": 10,
+                  "title": "LazyService@get 17"
+                },
+                {
+                  "noDragging": "true",
+                  "children": [
+                    {
+                      "noDragging": "true",
+                      "children": [{
+                        "noDragging": "true",
+                        "children": [{
+                          "noDragging": "true",
+                          "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;Ljava/util/Map;)V",
+                          "id": 5,
+                          "title": "RequestContext@<init> 40"
+                        }],
+                        "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;)V",
+                        "id": 4,
+                        "title": "RequestContext@<init> 38"
+                      }],
+                      "subtitle": "()Lcom/spr/utils/core/RequestContext;",
+                      "id": 13,
+                      "title": "RequestContextProvider@getContext 25"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "()Ljava/lang/String;",
+                      "id": 14,
+                      "title": "AdditionalDataKey@getKey 25(2)"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/String;)Ljava/lang/String;",
+                      "id": 15,
+                      "title": "RequestContext@getAdditional 25(3)"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/String;)Lcom/spr/operationmode/OperationMode;",
+                      "id": 16,
+                      "title": "OperationMode@valueOf 29"
+                    }
+                  ],
+                  "subtitle": "()Lcom/spr/operationmode/OperationMode;",
+                  "id": 12,
+                  "title": "ServiceSubstitutionFactory@getOperationMode 17(2)"
+                },
+                {
+                  "noDragging": "true",
+                  "children": [
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/Object;)Ljava/lang/Object;",
+                      "id": 18,
+                      "title": "SprPreconditions@notNull 29"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/Object;)Ljava/lang/Object;",
+                      "id": 19,
+                      "title": "SprPreconditions@notNull 30"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/Class;Lcom/spr/operationmode/OperationMode;)V",
+                      "id": 20,
+                      "title": "SubstitutionKey@<init> 32"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/String;)V",
+                      "id": 21,
+                      "title": "SubstitionUnsupportedException@<init> 34(8)"
+                    }
+                  ],
+                  "subtitle": "(Ljava/lang/Class;Lcom/spr/operationmode/OperationMode;)Ljava/lang/Object;",
+                  "id": 17,
+                  "title": "SubstituteProviderImpl@getSubstitute 17(3)"
+                }
+              ],
+              "subtitle": "(Ljava/lang/Class;)Ljava/lang/Object;",
+              "id": 9,
+              "title": "ServiceSubstitutionFactory@getSubstitute 594"
+            }],
+            "subtitle": "()Lcom/spr/ruleengine/services/repository/RulesRepositoryService;",
+            "id": 8,
+            "title": "RuleServiceImpl@getRulesRepositoryService 275"
+          },
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "subtitle": "()Ljava/lang/String;",
+                "id": 23,
+                "title": "MinifiedRule@getId 100"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "(Ljava/lang/String;)Lorg/springframework/data/mongodb/core/query/Query;",
+                "id": 24,
+                "title": "RulesRepositoryServiceImpl@getFindQuery 100(2)"
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "()J",
+                      "id": 27,
+                      "title": "DateTimeUtils@getUTCLongTime 1178"
+                    }],
+                    "subtitle": "()J",
+                    "id": 26,
+                    "title": "SprinklrUtils@now 124"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Z",
+                    "id": 28,
+                    "title": "MinifiedRule@isActive 125"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 29,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 125(3)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Z",
+                    "id": 31,
+                    "title": "MinifiedRule@isActive 126"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 32,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 126(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/String;",
+                    "id": 33,
+                    "title": "MinifiedRule@getExecutionType 127"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 34,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 127(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/String;",
+                    "id": 35,
+                    "title": "MinifiedRule@getName 128"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 36,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 128(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/String;",
+                    "id": 37,
+                    "title": "MinifiedRule@getDescription 129"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 38,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 129(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/util/Map;",
+                    "id": 39,
+                    "title": "MinifiedRule@getCustomProperties 130"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 40,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 130(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/util/List;",
+                    "id": 41,
+                    "title": "MinifiedRule@getShareConfigs 131"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 42,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 131(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/util/List;",
+                    "id": 43,
+                    "title": "MinifiedRule@getPreConditions 132"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 44,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 132(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/Long;",
+                    "id": 45,
+                    "title": "MinifiedRule@getCreatedTime 133"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 30,
+                      "title": "StringUtils@isNotBlank 139"
+                    }],
+                    "subtitle": "(Lorg/springframework/data/mongodb/core/query/Update;Ljava/lang/String;Ljava/lang/Object;)V",
+                    "id": 46,
+                    "title": "RulesRepositoryServiceImpl@addUpdate 133(2)"
+                  }
+                ],
+                "subtitle": "(Lcom/spr/ruleengine/framework/json/MinifiedRule;)Lorg/springframework/data/mongodb/core/query/Update;",
+                "id": 25,
+                "title": "RulesRepositoryServiceImpl@createUpdate 100(3)"
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "()Lorg/springframework/data/mongodb/core/MongoTemplate;",
+                      "id": 49,
+                      "title": "MongoTemplateFactoryImpl@getRuleEngineMongoTemplate 116"
+                    }],
+                    "subtitle": "()Lorg/springframework/data/mongodb/core/MongoTemplate;",
+                    "id": 48,
+                    "title": "RulesRepositoryServiceImpl@getRuleMongoTemplate 145"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/Class;",
+                    "id": 50,
+                    "title": "RulesRepositoryServiceImpl@getEntityClass 145(2)"
+                  }
+                ],
+                "subtitle": "(Lorg/springframework/data/mongodb/core/query/Query;Lorg/springframework/data/mongodb/core/query/Update;)V",
+                "id": 47,
+                "title": "RulesRepositoryServiceImpl@updateFirst 100(4)"
+              }
+            ],
+            "subtitle": "(Lcom/spr/ruleengine/framework/json/MinifiedRule;)V",
+            "id": 22,
+            "title": "RulesRepositoryServiceImpl@updateInfo 275(2)"
+          },
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [{
+                  "noDragging": "true",
+                  "children": [{
+                    "noDragging": "true",
+                    "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;Ljava/util/Map;)V",
+                    "id": 5,
+                    "title": "RequestContext@<init> 40"
+                  }],
+                  "subtitle": "(Lcom/spr/utils/core/Module;Ljava/lang/String;)V",
+                  "id": 4,
+                  "title": "RequestContext@<init> 38"
+                }],
+                "subtitle": "()Lcom/spr/utils/core/RequestContext;",
+                "id": 3,
+                "title": "RequestContextProvider@getContext 21"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "()Ljava/lang/String;",
+                "id": 6,
+                "title": "AdditionalDataKey@getKey 21(2)"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "(Ljava/lang/String;Ljava/lang/String;)V",
+                "id": 7,
+                "title": "RequestContext@addAdditional 21(4)"
+              }
+            ],
+            "subtitle": "(Lcom/spr/operationmode/OperationMode;)V",
+            "id": 51,
+            "title": "ServiceSubstitutionFactory@setOperationMode 278"
+          }
+        ],
+        "subtitle": "(Lcom/spr/ruleengine/framework/json/MinifiedRule;)Ljava/lang/Object;",
+        "id": 1,
+        "title": "RuleServiceImpl@lambda$updateDraftInfo$1 272"
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "subtitle": "()Lcom/spr/ops/executor/SprinklrExecutorServiceImpl;",
+            "id": 53,
+            "title": "SprinklrExecutorServiceImpl@getInstance 612"
+          },
+          {
+            "noDragging": "true",
+            "children": [{
+              "noDragging": "true",
+              "children": [
+                {
+                  "noDragging": "true",
+                  "subtitle": "()Lcom/spr/utils/core/UserContextProvider$UserContext;",
+                  "id": 56,
+                  "title": "UserContextProvider@getContext 35"
+                },
+                {
+                  "noDragging": "true",
+                  "subtitle": "()Lcom/spr/utils/core/RequestContext;",
+                  "id": 57,
+                  "title": "RequestContextProvider@getContextIfPresent 36"
+                },
+                {
+                  "noDragging": "true",
+                  "subtitle": "()Ljava/util/Map;",
+                  "id": 58,
+                  "title": "ESRequestContextProvider@getContext 37"
+                },
+                {
+                  "noDragging": "true",
+                  "subtitle": "(Lcom/spr/utils/core/UserContextProvider$UserContext;)V",
+                  "id": 59,
+                  "title": "UserContextProvider$UserContext@<init> 38"
+                },
+                {
+                  "noDragging": "true",
+                  "children": [
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/util/Map;)Z",
+                      "id": 61,
+                      "title": "SprinklrCollectionUtils@isNotEmpty 78"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/util/Map;)Ljava/util/HashMap;",
+                      "id": 62,
+                      "title": "Maps@newHashMap 80"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/util/Map;)Z",
+                      "id": 63,
+                      "title": "SprinklrCollectionUtils@isNotEmpty 82"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/util/Map;)Ljava/util/HashMap;",
+                      "id": 64,
+                      "title": "Maps@newHashMap 84"
+                    },
+                    {
+                      "noDragging": "true",
+                      "subtitle": "([Ljava/lang/Object;)Z",
+                      "id": 65,
+                      "title": "SprinklrCollectionUtils@isNotEmpty 87"
+                    }
+                  ],
+                  "subtitle": "(Lcom/spr/utils/core/RequestContext;)V",
+                  "id": 60,
+                  "title": "RequestContext@<init> 39"
+                },
+                {
+                  "noDragging": "true",
+                  "subtitle": "()Ljava/lang/String;",
+                  "id": 66,
+                  "title": "ListeningUtils@getHistoricContextId 41"
+                },
+                {
+                  "noDragging": "true",
+                  "subtitle": "()Lcom/spr/core/i18n/LocaleContext;",
+                  "id": 67,
+                  "title": "LocaleContextHolder@getLocaleContext 43"
+                }
+              ],
+              "subtitle": "()V",
+              "id": 55,
+              "title": "UserContextAwareCallable@<init> 612"
+            }],
+            "subtitle": "(Lcom/spr/ruleengine/services/RuleServiceImpl;Ljava/util/concurrent/Callable;)V",
+            "id": 54,
+            "title": "RuleServiceImpl$1@<init> 612(2)"
+          },
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 71,
+                      "title": "StringUtils@isBlank 368"
+                    }],
+                    "subtitle": "(Ljava/lang/CharSequence;)Z",
+                    "id": 70,
+                    "title": "StringUtils@isNotBlank 124"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/String;",
+                    "id": 72,
+                    "title": "AbstractSprinklrExecutorService@getType 124(2)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [{
+                      "noDragging": "true",
+                      "subtitle": "(Ljava/lang/CharSequence;)Z",
+                      "id": 71,
+                      "title": "StringUtils@isBlank 368"
+                    }],
+                    "subtitle": "(Ljava/lang/CharSequence;)Z",
+                    "id": 73,
+                    "title": "StringUtils@isNotBlank 124(3)"
+                  },
+                  {
+                    "noDragging": "true",
+                    "subtitle": "()Ljava/lang/String;",
+                    "id": 74,
+                    "title": "AbstractSprinklrExecutorService@getType 125"
+                  },
+                  {
+                    "noDragging": "true",
+                    "children": [
+                      {
+                        "noDragging": "true",
+                        "subtitle": "()Z",
+                        "id": 76,
+                        "title": "LoggerImpl@isDynamicDebugEnabled 382"
+                      },
+                      {
+                        "noDragging": "true",
+                        "subtitle": "(Ljava/lang/String;)Ljava/lang/String;",
+                        "id": 77,
+                        "title": "LoggerImpl@cleanPotentialLogForging 385"
+                      }
+                    ],
+                    "subtitle": "(Ljava/lang/String;Ljava/lang/Throwable;)V",
+                    "id": 75,
+                    "title": "LoggerImpl@error 126(2)"
+                  }
+                ],
+                "subtitle": "()V",
+                "id": 69,
+                "title": "AbstractSprinklrExecutorService@warnIfRecursiveCall 105"
+              },
+              {
+                "noDragging": "true",
+                "subtitle": "()Ljava/util/concurrent/ExecutorService;",
+                "id": 78,
+                "title": "AbstractSprinklrExecutorService@getExecutorService 106"
+              }
+            ],
+            "subtitle": "(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;",
+            "id": 68,
+            "title": "SprinklrExecutorServiceImpl@submit 612(3)"
+          }
+        ],
+        "subtitle": "(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;",
+        "id": 52,
+        "title": "RuleServiceImpl@executeAsync 272(2)"
+      }
+    ],
+    "subtitle": "(Lcom/spr/ruleengine/framework/json/MinifiedRule;)V",
+    "id": 0,
+    "title": "RuleServiceImpl@updateDraftInfo "
+  }]
+  
