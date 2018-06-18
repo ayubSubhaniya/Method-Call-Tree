@@ -116,12 +116,15 @@ class App extends Component {
 
     const analyseMethod = () => {
       const url = HOST_NAME+"/analyseMethod"
-      const {className, methodName, maxDepth} = this.state;
-      var {methodParameter} = this.state;
+      var {methodParameter,className, methodName, maxDepth} = this.state;
+
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
         return;
       }
       else{
+        methodParameter=methodParameter.trimLeft()
+        className=className.trimLeft()
+        methodName=methodName.trimLeft()
         methodParameter="'"+methodParameter+"'";
       }
 
