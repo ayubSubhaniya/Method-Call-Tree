@@ -115,7 +115,7 @@ class App extends Component {
       });
 
     const analyseMethod = () => {
-      const url = HOST_NAME+":"+PORT+"/analyseMethod"
+      const url = HOST_NAME+"/analyseMethod"
       const {className, methodName, maxDepth} = this.state;
       var {methodParameter} = this.state;
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
