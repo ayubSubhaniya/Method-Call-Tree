@@ -18,6 +18,7 @@ import {nodeAtIndex} from './../../src/utils/tree-data-utils'
 const maxDepth = 30;
 const HOST_NAME = "http://localhost"
 const PORT = "8081"
+const analyseMethodUrl = HOST_NAME+"/analyseMethod"
 
 class App extends Component {
   constructor(props) {
@@ -115,7 +116,6 @@ class App extends Component {
       });
 
     const generateTree = () => {
-      const url = HOST_NAME+"/analyseMethod"
       var {methodParameter,className, methodName, maxDepth} = this.state;
 
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
@@ -140,7 +140,6 @@ class App extends Component {
     }
 
     const generateReverseTree = () => {
-      const url = HOST_NAME+":8081/analyseMethod"
       var {methodParameter,className, methodName, maxDepth} = this.state;
 
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
