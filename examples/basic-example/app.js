@@ -115,7 +115,7 @@ class App extends Component {
       });
 
     const generateTree = () => {
-      const url = HOST_NAME+":8081/analyseMethod"
+      const url = HOST_NAME+"/analyseMethod"
       var {methodParameter,className, methodName, maxDepth} = this.state;
 
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
