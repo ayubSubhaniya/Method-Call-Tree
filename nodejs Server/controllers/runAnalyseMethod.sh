@@ -4,4 +4,4 @@ cd ..
 cd ..
 cd bin
 chmod +x analyseMethod.sh
-./analyseMethod.sh $1 $2 $3 $4
+./analyseMethod.sh $1 $2 $3 $4 $5

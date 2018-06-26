@@ -197,3 +197,24 @@
   border-bottom: 12px solid transparent;
   border-left: 12px solid #36c2f6;
 }
+
+.rst_interfaceMethod {
+  color: rgb(30, 117, 19)
+}
+
+.rst_overidedMethod {
+  color: steelblue
+}
+
+.rst_inheritedMethod {
+  color: blue
+}
+
+.color_scheme {
+  column-count: 4;
+  font-size: large; 
+}
+
+.type_of_method{
+  font-size: larger;
+}

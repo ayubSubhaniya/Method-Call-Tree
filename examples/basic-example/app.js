@@ -15,7 +15,7 @@ import '../shared/favicon/favicon.ico';
 import '../shared/favicon/safari-pinned-tab.svg';
 import {nodeAtIndex} from './../../src/utils/tree-data-utils'
 
-const maxDepth = 15;
+const maxDepth = 30;
 const HOST_NAME = "http://localhost"
 const PORT = "8081"
 
@@ -114,14 +114,17 @@ class App extends Component {
             : 0,
       });
 
-    const analyseMethod = () => {
-      const url = HOST_NAME+":"+PORT+"/analyseMethod"
-      const {className, methodName, maxDepth} = this.state;
-      var {methodParameter} = this.state;
+    const generateTree = () => {
+      const url = HOST_NAME+":8081/analyseMethod"
+      var {methodParameter,className, methodName, maxDepth} = this.state;
+
       if (methodParameter==null || className==null || methodName==null || maxDepth==null){
         return;
       }
       else{
+        methodParameter=methodParameter.trimLeft()
+        className=className.trimLeft()
+        methodName=methodName.trimLeft()
         methodParameter="'"+methodParameter+"'";
       }
 
@@ -133,7 +136,32 @@ class App extends Component {
         }
       };
       xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xmlhttp.send(JSON.stringify({className,methodName,methodParameter,maxDepth}));
+      xmlhttp.send(JSON.stringify({className,methodName,methodParameter,maxDepth,reverse: false}));
+    }
+
+    const generateReverseTree = () => {
+      const url = HOST_NAME+":8081/analyseMethod"
+      var {methodParameter,className, methodName, maxDepth} = this.state;
+
+      if (methodParameter==null || className==null || methodName==null || maxDepth==null){
+        return;
+      }
+      else{
+        methodParameter=methodParameter.trimLeft()
+        className=className.trimLeft()
+        methodName=methodName.trimLeft()
+        methodParameter="'"+methodParameter+"'";
+      }
+
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("PUT", url, true);
+      xmlhttp.onreadystatechange = function () {
+        if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+            
+        }
+      };
+      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      xmlhttp.send(JSON.stringify({className,methodName,methodParameter,maxDepth,reverse: true}));
     }
 
     const isVirtualized = true;
@@ -171,9 +199,19 @@ class App extends Component {
           onChange={event =>
             this.setState({ maxDepth: event.target.value })
           }/>
-          <button onClick={analyseMethod} type="button">Submit</button>
+          <button onClick={generateTree} type="button">GenerateTree</button>
+          <button onClick={generateReverseTree} type="button">GenerateReverseTree</button>
 
         </form>
+        </section>
+
+        <section>
+          <div className='type_of_method'><b>Type of method</b></div>
+          <div className='color_scheme'>
+          <div className='rst_interfaceMethod'>Implementation of InterfaceMethod</div>
+          <div className='rst_overidedMethod'>OverridedMethod</div>
+          <div className='rst_inheritedMethod'>InheritedMethod</div>
+          </div>
         </section>
 
         <section className="main-content">

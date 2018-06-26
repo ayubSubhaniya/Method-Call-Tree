@@ -3,14 +3,14 @@ var exec = require('child-process-promise').exec;
 
 module.exports = {
     analyseMethod: async (req, res, next) => {
-        const {className,methodName,methodParameter,maxDepth} = req.body;
+        const {className,methodName,methodParameter,maxDepth,reverse} = req.body;
         if (className==null || methodName ==null || methodParameter==null || className.length==0 || methodName.length==0 || methodParameter.length==0){
             res.status(400).json({error:"className methodName methodParameter required"});
             return;
         }
-        
+        const reverseCommand=reverse?"reverse":"normal"
         const command1 = 'chmod +x controllers/runAnalyseMethod.sh'
-        const command2 = './controllers/runAnalyseMethod.sh '+className+' '+methodName+' '+methodParameter+' '+maxDepth;
+        const command2 = './controllers/runAnalyseMethod.sh '+reverseCommand+' '+className+' '+methodName+' '+methodParameter+' '+maxDepth;
         console.log(command2)
         exec(command1)
             .then(function (result) {
@@ -32,6 +32,6 @@ module.exports = {
             .catch(function (err) {
                     console.error('ERROR: ', err);
             });
-        res.status(200)
+        res.status(200).json({success:true})
     },
 };

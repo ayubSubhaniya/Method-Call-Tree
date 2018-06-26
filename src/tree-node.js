@@ -24,12 +24,13 @@ class TreeNode extends Component {
       path, // Delete from otherProps
       ...otherProps
     } = this.props;
-
+    
     // Construct the scaffold representing the structure of the tree
     const scaffoldBlockCount = lowerSiblingCounts.length;
     const scaffold = [];
     lowerSiblingCounts.forEach((lowerSiblingCount, i) => {
       let lineClass = '';
+      
       if (lowerSiblingCount > 0) {
         // At this level in the tree, the nodes had sibling nodes further down
 
@@ -117,8 +118,17 @@ class TreeNode extends Component {
       }
     });
 
+    let colorClass = '';
+      
+    if (node.type==3)
+      colorClass='rst_interfaceMethod'
+    else if (node.type==1)
+      colorClass='rst_overidedMethod'
+    else if (node.type==2)
+      colorClass='rst_inheritedMethod'
+
     return connectDropTarget(
-      <div {...otherProps} className="rst__node">
+      <div {...otherProps} className={`${"rst__node"} ${colorClass}`}>
         {scaffold}
 
         <div

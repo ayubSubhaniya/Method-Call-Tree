@@ -33,20 +33,28 @@ function stringSearch(key, searchQuery, node, path, treeIndex) {
   if (typeof node[key] === 'function') {
     // Search within text after calling its function to generate the text
     return (
-      String(node[key]({ node, path, treeIndex })).indexOf(searchQuery) > -1
+      String(node[key]({ node, path, treeIndex })).toLowerCase().indexOf(searchQuery) > -1
     );
   } else if (typeof node[key] === 'object') {
     // Search within text inside react elements
-    return getReactElementText(node[key]).indexOf(searchQuery) > -1;
+    //console.log(getReactElementText(node[key]).toLowerCase())
+    return getReactElementText(node[key]).toLowerCase().indexOf(searchQuery) > -1;
   }
 
   // Search within string
-  return node[key] && String(node[key]).indexOf(searchQuery) > -1;
+  return node[key] && String(node[key]).toLowerCase().indexOf(searchQuery) > -1;
 }
 
 export function defaultSearchMethod({ node, path, treeIndex, searchQuery }) {
+  var searchWords = searchQuery.split(" ")
+  let result=true
+  for (let i=0;i<searchWords.length;i++){
+    searchWords[i]=searchWords[i].toLowerCase()
+    result=result&&stringSearch('title', searchWords[i], node, path, treeIndex)//||stringSearch('subtitle', searchWords[i], node, path, treeIndex))
+  }
+  if (searchWords.length==0)
+    result=false
   return (
-    stringSearch('title', searchQuery, node, path, treeIndex) ||
-    stringSearch('subtitle', searchQuery, node, path, treeIndex)
+    result
   );
 }
