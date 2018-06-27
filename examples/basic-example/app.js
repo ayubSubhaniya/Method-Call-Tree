@@ -18,7 +18,15 @@ import {nodeAtIndex} from './../../src/utils/tree-data-utils'
 const maxDepth = 30;
 const HOST_NAME = "http://localhost"
 const PORT = "8081"
+const url = HOST_NAME+":"+PORT+"/analyseMethod"
 
+const scheduleFlow = 'schedule'
+const posterJobFlow = 'posterJob'
+const baseSprJobFlow = 'baseSprJob'
+const outboundPreProcessorFlow = 'outboundPreProcessor'
+
+const defaultFlow = scheduleFlow
+const defaultChannel = ''
 class App extends Component {
   constructor(props) {
     super(props);
@@ -30,10 +38,9 @@ class App extends Component {
       searchFocusIndex: 0,
       searchFoundCount: null,
       treeData: data,
-      className : '',
-      methodName : '',
-      methodParameter : '',
-      maxDepth: 5
+      maxDepth: 5,
+      flow:defaultFlow,
+      channelName:defaultChannel,
     };
 
     this.updateTreeData = this.updateTreeData.bind(this);
@@ -73,10 +80,9 @@ class App extends Component {
       searchString,
       searchFocusIndex,
       searchFoundCount,
-      className,
-      methodParameter,
-      methodName,
-      maxDepth
+      channelName,
+      maxDepth,
+      flow,
     } = this.state;
 
 
@@ -115,17 +121,13 @@ class App extends Component {
       });
 
     const generateTree = () => {
-      const url = HOST_NAME+"/analyseMethod"
-      var {methodParameter,className, methodName, maxDepth} = this.state;
+      var {channelName, maxDepth} = this.state;
 
-      if (methodParameter==null || className==null || methodName==null || maxDepth==null){
+      if (channelName==null || maxDepth==null){
         return;
       }
       else{
-        methodParameter=methodParameter.trimLeft()
-        className=className.trimLeft()
-        methodName=methodName.trimLeft()
-        methodParameter="'"+methodParameter+"'";
+        channelName=channelName.trimLeft()
       }
 
       const xmlhttp = new XMLHttpRequest();
@@ -136,33 +138,40 @@ class App extends Component {
         }
       };
       xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xmlhttp.send(JSON.stringify({className,methodName,methodParameter,maxDepth,reverse: false}));
+      xmlhttp.send(JSON.stringify({
+        channelName,
+        maxDepth,
+        flow
+      }));
     }
 
-    const generateReverseTree = () => {
-      const url = HOST_NAME+":8081/analyseMethod"
-      var {methodParameter,className, methodName, maxDepth} = this.state;
-
-      if (methodParameter==null || className==null || methodName==null || maxDepth==null){
-        return;
-      }
-      else{
-        methodParameter=methodParameter.trimLeft()
-        className=className.trimLeft()
-        methodName=methodName.trimLeft()
-        methodParameter="'"+methodParameter+"'";
-      }
-
-      const xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("PUT", url, true);
-      xmlhttp.onreadystatechange = function () {
-        if(xmlhttp.readyState === 4 && xmlhttp.status === 200) {
-            
-        }
-      };
-      xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-      xmlhttp.send(JSON.stringify({className,methodName,methodParameter,maxDepth,reverse: true}));
+    const viewScheduleFlow = () => {
+        this.setState({
+          flow:scheduleFlow
+        })
+        generateTree
     }
+
+    const viewBaseSprJobFlow = () => {
+      this.setState({
+        flow:baseSprJobFlow
+      })
+      generateTree
+  }
+
+  const viewOutboundPreProcessorFlow = () => {
+    this.setState({
+      flow:outboundPreProcessorFlow
+    })
+    generateTree
+  }
+
+    const viewPosterJobFlow = () => {
+      this.setState({
+        flow:posterJobFlow
+      })
+      generateTree
+  }
 
     const isVirtualized = true;
     const treeContainerStyle = isVirtualized ? { height: 650 , width : 950} : {};
@@ -175,33 +184,24 @@ class App extends Component {
         </section>
         <section>
         <form className='form-content'>
-          Class Name:
+          Channel Name:
           <input className='form-element' type="text" name="className"
-           value={className}
+           value={channelName}
            onChange={event =>
-             this.setState({ className: event.target.value })
+             this.setState({ channelName: event.target.value })
            }/>
-          Method Name:
-          <input className='form-element' type="text" name="methodName"
-          value={methodName}
-         onChange={event =>
-           this.setState({ methodName: event.target.value })
-         }/>
-          Method Paramter:
-          <input type="text" className='form-element' name="methodParamter"
-          value={methodParameter}
-         onChange={event =>
-           this.setState({ methodParameter: event.target.value })
-         }/>
          Max Depth:
            <input type="number" className='maxdepth' name="maxDepth"
            value={maxDepth}
           onChange={event =>
             this.setState({ maxDepth: event.target.value })
           }/>
-          <button onClick={generateTree} type="button">GenerateTree</button>
-          <button onClick={generateReverseTree} type="button">GenerateReverseTree</button>
-
+          <button onClick={generateTree} type="button"><b>GenerateTree</b></button>
+      
+        <button onClick={viewScheduleFlow} type="button" ><b>View Schedule Flow</b></button>
+        <button onClick={viewOutboundPreProcessorFlow} type="button" ><b>View OutboundPreProcessor Flow</b></button>
+        <button onClick={viewPosterJobFlow} type="button" ><b>View PosterJob Flow</b></button>
+        <button onClick={viewBaseSprJobFlow} type="button" ><b>View BaseSprJob Flow</b></button>
         </form>
         </section>
 
