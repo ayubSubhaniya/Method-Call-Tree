@@ -226,10 +226,11 @@
 
 .rst__rowTitle {
   font-weight: bold;
+  font-size: 75%;
 }
 
 .rst__rowTitleWithSubtitle {
-  font-size: 85%;
+  font-size: 75%;
   display: block;
   height: 0.8rem;
 }

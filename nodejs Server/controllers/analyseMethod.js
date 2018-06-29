@@ -3,14 +3,37 @@ var exec = require('child-process-promise').exec;
 
 module.exports = {
     analyseMethod: async (req, res, next) => {
-        const {className,methodName,methodParameter,maxDepth,reverse} = req.body;
-        if (className==null || methodName ==null || methodParameter==null || className.length==0 || methodName.length==0 || methodParameter.length==0){
-            res.status(400).json({error:"className methodName methodParameter required"});
-            return;
+        const {
+            className,
+            methodName,
+            methodParameter,
+            channelName,
+            maxDepth,
+            flow,
+        } = req.body;
+        let rootChangeRequest=false
+        if (className!=null&&(className.length>0 || methodName.length>0 || methodParameter.length>0 )){
+            rootChangeRequest=true
         }
-        const reverseCommand=reverse?"reverse":"normal"
-        const command1 = 'chmod +x controllers/runAnalyseMethod.sh'
-        const command2 = './controllers/runAnalyseMethod.sh '+reverseCommand+' '+className+' '+methodName+' '+methodParameter+' '+maxDepth;
+    
+        if (channelName.length==0){
+            res.status(400).json({error:"channelName required"})
+            return
+        }
+
+        let makeGraphCommand
+        let command1
+        let command2
+
+        if (rootChangeRequest){
+            changeRootCommand='changeRoot'
+            command1 = 'chmod +x controllers/runAnalyseMethod.sh'
+            command2 = './controllers/runAnalyseMethod.sh'+' '+changeRootCommand+' '+channelName+' '+flow+' '+maxDepth+' '+className+' '+methodName+' '+methodParameter
+        } else {
+            makeGraphCommand='makeGraph'
+            command1 = 'chmod +x controllers/runAnalyseMethod.sh'
+            command2 = './controllers/runAnalyseMethod.sh'+' '+makeGraphCommand+' '+channelName+' '+flow+' '+maxDepth
+        }
         console.log(command2)
         exec(command1)
             .then(function (result) {

@@ -15,7 +15,6 @@ body {
   display : flex;
   justify-content: space-between;
   align-items: stretch
-
 }
 
 .form-element{
@@ -23,7 +22,7 @@ body {
 }
 
 .maxdepth{
-    width:25px
+    width:50px
 }
 
 /**

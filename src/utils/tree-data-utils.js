@@ -24,7 +24,7 @@ function getNodeDataAtTreeIndexOrNextIndex({
 
   /**At node to stackTrace */
   if (!isPseudoRoot)
-    nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })] = node.title
+    nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })] = node.stackTraceInfo
   // Return target node when found
   if (currentIndex === targetIndex) {
     return {
@@ -114,7 +114,7 @@ function walkDescendants({
   
   /**At node to stackTrace */
   if (!isPseudoRoot)
-    nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })] = node.title
+    nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })] = node.stackTraceInfo
 
   const selfInfo = isPseudoRoot
     ? null
@@ -208,7 +208,7 @@ function mapDescendants({
 
   /**At node to stackTrace */
   if (!isPseudoRoot)
-    nodeAtIndex[getNodeKey({ node: nextNode, treeIndex: currentIndex })] = nextNode.title
+    nodeAtIndex[getNodeKey({ node: nextNode, treeIndex: currentIndex })] = nextNode.stackTraceInfo
 
   const selfInfo = {
     node: nextNode,
@@ -727,7 +727,7 @@ function addNodeAtDepthAndIndex({
       : [...path, getNodeKey({ node: n, treeIndex: currentIndex })];
 
   if (!isPseudoRoot)
-    nodeAtIndex[getNodeKey({ node: n, treeIndex: currentIndex })]=n.title
+    nodeAtIndex[getNodeKey({ node: n, treeIndex: currentIndex })]=n.stackTraceInfo
 
   // If the current position is the only possible place to add, add it
   if (
@@ -910,7 +910,7 @@ export function insertNode({
   expandParent = false,
 }) {
   if (!treeData && targetDepth === 0) {
-    nodeAtIndex[getNodeKey({ node: newNode, treeIndex: 0 })]=newNode.title
+    nodeAtIndex[getNodeKey({ node: newNode, treeIndex: 0 })]=newNode.stackTraceInfo
     return {
       treeData: [newNode],
       treeIndex: 0,
@@ -938,7 +938,7 @@ export function insertNode({
   }
 
   const treeIndex = insertResult.insertedTreeIndex;
-  nodeAtIndex[getNodeKey({ node: newNode, treeIndex })]=newNode.title
+  nodeAtIndex[getNodeKey({ node: newNode, treeIndex })]=newNode.stackTraceInfo
   return {
     treeData: insertResult.node.children,
     treeIndex,
@@ -1113,7 +1113,7 @@ export function find({
       ? []
       : [...path, getNodeKey({ node, treeIndex: currentIndex })];
       if (!isPseudoRoot)
-        nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })]=node.title
+        nodeAtIndex[getNodeKey({ node, treeIndex: currentIndex })]=node.stackTraceInfo
     const extraInfo = isPseudoRoot
       ? null
       : {
