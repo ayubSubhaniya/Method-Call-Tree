@@ -441,7 +441,7 @@ class App extends Component {
             this.setState({ maxDepth: event.target.value })
           }/>
 
-          Min Chunk Score:
+          Min Churn Score:
            <input type="number" className='maxdepth' name="chunkScore"
            value={allowedChunkScore}
           onChange={event =>
