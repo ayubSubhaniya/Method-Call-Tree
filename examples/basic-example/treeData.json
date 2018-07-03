@@ -1,1 +1,421 @@
-[{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.isDuplicateRequest(PublishingUtils.java:2533)","methodName":"isDuplicateRequest","methodParameter":"(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/ops/partners/PartnerService;)Z","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@isDuplicateRequest 2533","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.checkDuplicateRequest(PublishingUtils.java:342)","methodName":"checkDuplicateRequest","methodParameter":"(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/ops/partners/PartnerService;)V","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@checkDuplicateRequest 342","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.validation.ValidationServiceImpl.validate(ValidationServiceImpl.java:)","methodName":"validate","methodParameter":"(Ljava/lang/Object;)V","className":"com/spr/validation/ValidationServiceImpl","title":"ValidationServiceImpl@validate ","type":3}],"stackTraceInfo":"at com.spr.validation.ValidationService.validate(ValidationService.java:346)","methodName":"validate","methodParameter":"(Ljava/lang/Object;)V","className":"com/spr/validation/ValidationService","title":"ValidationService@validate 346","type":0},{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.security.content.service.ContentScanServiceImpl.isUrlSecurityScanEnabled(ContentScanServiceImpl.java:90)","methodName":"isUrlSecurityScanEnabled","methodParameter":"()Z","className":"com/spr/security/content/service/ContentScanServiceImpl","title":"ContentScanServiceImpl@isUrlSecurityScanEnabled 90","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.security.content.service.ContentScanServiceImpl.checkAndReturnUnsafeUrls(ContentScanServiceImpl.java:91)","methodName":"checkAndReturnUnsafeUrls","methodParameter":"(Ljava/lang/String;)Ljava/util/List;","className":"com/spr/security/content/service/ContentScanServiceImpl","title":"ContentScanServiceImpl@checkAndReturnUnsafeUrls 91","type":0}],"stackTraceInfo":"at com.spr.security.content.service.ContentScanServiceImpl.checkAndReturnUnsafeUrlsIfPropertyEnabled(ContentScanServiceImpl.java:)","methodName":"checkAndReturnUnsafeUrlsIfPropertyEnabled","methodParameter":"(Ljava/lang/String;)Ljava/util/List;","className":"com/spr/security/content/service/ContentScanServiceImpl","title":"ContentScanServiceImpl@checkAndReturnUnsafeUrlsIfPropertyEnabled ","type":3}],"stackTraceInfo":"at com.spr.security.content.service.ContentScanService.checkAndReturnUnsafeUrlsIfPropertyEnabled(ContentScanService.java:1239)","methodName":"checkAndReturnUnsafeUrlsIfPropertyEnabled","methodParameter":"(Ljava/lang/String;)Ljava/util/List;","className":"com/spr/security/content/service/ContentScanService","title":"ContentScanService@checkAndReturnUnsafeUrlsIfPropertyEnabled 1239","type":0}],"stackTraceInfo":"at com.spr.rest.PublishingRestAPI.scanCommentText(PublishingRestAPI.java:349)","methodName":"scanCommentText","methodParameter":"(Ljava/lang/String;)V","className":"com/spr/rest/PublishingRestAPI","title":"PublishingRestAPI@scanCommentText 349(3)","type":0},{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.beans.universal.publishing.ChannelSpecificMessageData.newChannelSpecificData(ChannelSpecificMessageData.java:4076)","methodName":"newChannelSpecificData","methodParameter":"(Ljava/lang/Object;Lcom/spr/enums/ChannelType;Ljava/lang/Long;)Lcom/spr/beans/universal/publishing/ChannelSpecificMessageData;","className":"com/spr/beans/universal/publishing/ChannelSpecificMessageData","title":"ChannelSpecificMessageData@newChannelSpecificData 4076","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.addCommonAdditionalIfMissing(PublishingUtils.java:4115)","methodName":"addCommonAdditionalIfMissing","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Map;","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@addCommonAdditionalIfMissing 4115","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.addVersionHeaderInMessageDTO(PublishingUtils.java:4095)","methodName":"addVersionHeaderInMessageDTO","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Ljava/lang/String;Ljava/lang/String;)V","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@addVersionHeaderInMessageDTO 4095","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.addClientDetails(PublishingUtils.java:352)","methodName":"addClientDetails","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Ljavax/servlet/http/HttpServletRequest;)V","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@addClientDetails 352","type":0},{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.util.OutboundMessageXSSHelper.isBlogOrEmail(OutboundMessageXSSHelper.java:60)","methodName":"isBlogOrEmail","methodParameter":"(Lcom/spr/enums/ChannelType;Ljava/lang/Long;)Z","className":"com/spr/ops/publishing/util/OutboundMessageXSSHelper","title":"OutboundMessageXSSHelper@isBlogOrEmail 60(4)","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanContent(OutboundMessageXSSHelper.java:60)","methodName":"cleanContent","methodParameter":"(Lcom/spr/beans/universal/publishing/Content;Z)V","className":"com/spr/ops/publishing/util/OutboundMessageXSSHelper","title":"OutboundMessageXSSHelper@cleanContent 60(5)","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanTaxonomy(OutboundMessageXSSHelper.java:62)","methodName":"cleanTaxonomy","methodParameter":"(Lcom/spr/beans/universal/publishing/Taxonomy;)V","className":"com/spr/ops/publishing/util/OutboundMessageXSSHelper","title":"OutboundMessageXSSHelper@cleanTaxonomy 62(2)","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanXSS(OutboundMessageXSSHelper.java:1333)","methodName":"cleanXSS","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)V","className":"com/spr/ops/publishing/util/OutboundMessageXSSHelper","title":"OutboundMessageXSSHelper@cleanXSS 1333","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageFactory.createPostsForPreview(OutboundMessageFactory.java:1108)","methodName":"createPostsForPreview","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/List;","className":"com/spr/ops/publishing/service/OutboundMessageFactory","title":"OutboundMessageFactory@createPostsForPreview 1108","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.poster.PosterResponse.successResponse(PosterResponse.java:1116)","methodName":"successResponse","methodParameter":"(Ljava/lang/String;Ljava/lang/Object;)Lcom/spr/ops/publishing/poster/PosterResponse;","className":"com/spr/ops/publishing/poster/PosterResponse","title":"PosterResponse@successResponse 1116(3)","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.poster.OutboundPosterService.postProcess(OutboundPosterService.java:1116)","methodName":"postProcess","methodParameter":"(Lcom/spr/beans/universal/publishing/Post;Lcom/spr/ops/publishing/poster/PosterResponse;)V","className":"com/spr/ops/publishing/poster/OutboundPosterService","title":"OutboundPosterService@postProcess 1116(4)","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createFanMessage(OutboundMessageServiceImpl.java:1336)","methodName":"createFanMessage","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@createFanMessage 1336","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageFactoryImpl.createMessage(OutboundMessageFactoryImpl.java:)","methodName":"createMessage","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Status;)Lcom/spr/beans/universal/publishing/Message;","className":"com/spr/ops/publishing/service/OutboundMessageFactoryImpl","title":"OutboundMessageFactoryImpl@createMessage ","type":3}],"stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageFactory.createMessage(OutboundMessageFactory.java:1341)","methodName":"createMessage","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Status;)Lcom/spr/beans/universal/publishing/Message;","className":"com/spr/ops/publishing/service/OutboundMessageFactory","title":"OutboundMessageFactory@createMessage 1341","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.OutboundMessageValidatorImpl.validateNewMessageForPublishing(OutboundMessageValidatorImpl.java:)","methodName":"validateNewMessageForPublishing","methodParameter":"(Lcom/spr/beans/universal/publishing/Message;)V","className":"com/spr/ops/publishing/OutboundMessageValidatorImpl","title":"OutboundMessageValidatorImpl@validateNewMessageForPublishing ","type":3}],"stackTraceInfo":"at com.spr.ops.publishing.OutboundMessageValidator.validateNewMessageForPublishing(OutboundMessageValidator.java:1343)","methodName":"validateNewMessageForPublishing","methodParameter":"(Lcom/spr/beans/universal/publishing/Message;)V","className":"com/spr/ops/publishing/OutboundMessageValidator","title":"OutboundMessageValidator@validateNewMessageForPublishing 1343","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessageInTransaction(OutboundMessageServiceImpl.java:3586)","methodName":"createAndScheduleMessageInTransaction","methodParameter":"(Lcom/spr/beans/universal/publishing/Message;Ljava/util/List;Ljava/util/List;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@createAndScheduleMessageInTransaction 3586","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.executeInTransaction(OutboundMessageServiceImpl.java:3586)","methodName":"executeInTransaction","methodParameter":"(Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;Ljava/util/Collection;Ljava/util/Collection;)Ljava/lang/Object;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@executeInTransaction 3586","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessageAfterCommitCallBack(OutboundMessageServiceImpl.java:3588)","methodName":"createAndScheduleMessageAfterCommitCallBack","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Ljava/util/List;Ljava/util/List;Ljava/lang/Long;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@createAndScheduleMessageAfterCommitCallBack 3588(2)","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.deleteApprovalTasksOnRolledBack(OutboundMessageServiceImpl.java:3589)","methodName":"deleteApprovalTasksOnRolledBack","methodParameter":"(Lcom/spr/beans/universal/publishing/Message;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@deleteApprovalTasksOnRolledBack 3589","type":0},{"noDragging":"true","stackTraceInfo":"at com.spr.ops.publishing.util.PublishingUtils.deleteAdditionalPropertiesOnRolledBack(PublishingUtils.java:3589)","methodName":"deleteAdditionalPropertiesOnRolledBack","methodParameter":"()Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;","className":"com/spr/ops/publishing/util/PublishingUtils","title":"PublishingUtils@deleteAdditionalPropertiesOnRolledBack 3589(2)","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.doCreateAndSchedulePosts(OutboundMessageServiceImpl.java:1345)","methodName":"doCreateAndSchedulePosts","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Message;)Ljava/util/Collection;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@doCreateAndSchedulePosts 1345","type":0}],"stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessage(OutboundMessageServiceImpl.java:)","methodName":"createAndScheduleMessage","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;","className":"com/spr/ops/publishing/service/OutboundMessageServiceImpl","title":"OutboundMessageServiceImpl@createAndScheduleMessage ","type":3}],"stackTraceInfo":"at com.spr.ops.publishing.service.OutboundMessageService.createAndScheduleMessage(OutboundMessageService.java:354)","methodName":"createAndScheduleMessage","methodParameter":"(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;","className":"com/spr/ops/publishing/service/OutboundMessageService","title":"OutboundMessageService@createAndScheduleMessage 354","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.util.AdUtils.generateId(AdUtils.java:1225)","methodName":"generateId","methodParameter":"()Ljava/lang/String;","className":"com/spr/util/AdUtils","title":"AdUtils@generateId 1225","type":0},{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.entities.LockingConfig.<init>(LockingConfig.java:26)","methodName":"<init>","methodParameter":"()V","className":"com/spr/entities/LockingConfig","title":"LockingConfig@<init> 26","type":0}],"stackTraceInfo":"at com.spr.paid.domain.QuickPublishAdConfig.<init>(QuickPublishAdConfig.java:1232)","methodName":"<init>","methodParameter":"(Ljava/lang/Long;Lcom/spr/paid/domain/adcollection/PaidInitiativePublishDTO;)V","className":"com/spr/paid/domain/QuickPublishAdConfig","title":"QuickPublishAdConfig@<init> 1232(2)","type":0}],"stackTraceInfo":"at com.spr.rest.PublishingRestAPI.saveAdConfigIfExists(PublishingRestAPI.java:355)","methodName":"saveAdConfigIfExists","methodParameter":"(Ljava/util/Collection;Lcom/spr/paid/domain/adcollection/PaidInitiativePublishDTO;)V","className":"com/spr/rest/PublishingRestAPI","title":"PublishingRestAPI@saveAdConfigIfExists 355(2)","type":0},{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","children":[{"noDragging":"true","stackTraceInfo":"at com.spr.utils.core.ResponseGenerator.generateStreamingResponse(ResponseGenerator.java:211)","methodName":"generateStreamingResponse","methodParameter":"(Ljava/lang/Object;Ljavax/ws/rs/core/MediaType;I)Ljavax/ws/rs/core/Response;","className":"com/spr/utils/core/ResponseGenerator","title":"ResponseGenerator@generateStreamingResponse 211","type":0}],"stackTraceInfo":"at com.spr.utils.core.ResponseGenerator.generateStreamingResponse(ResponseGenerator.java:115)","methodName":"generateStreamingResponse","methodParameter":"(Ljava/lang/Object;I)Ljavax/ws/rs/core/Response;","className":"com/spr/utils/core/ResponseGenerator","title":"ResponseGenerator@generateStreamingResponse 115","type":0}],"stackTraceInfo":"at com.spr.utils.core.ResponseGenerator.generateResponseWithTimestampDates(ResponseGenerator.java:83)","methodName":"generateResponseWithTimestampDates","methodParameter":"(Ljava/lang/Object;Ljavax/ws/rs/core/MediaType;I)Ljavax/ws/rs/core/Response;","className":"com/spr/utils/core/ResponseGenerator","title":"ResponseGenerator@generateResponseWithTimestampDates 83","type":0}],"stackTraceInfo":"at com.spr.utils.core.ResponseGenerator.generateResponseWithTimestampDates(ResponseGenerator.java:357)","methodName":"generateResponseWithTimestampDates","methodParameter":"(Ljava/lang/Object;)Ljavax/ws/rs/core/Response;","className":"com/spr/utils/core/ResponseGenerator","title":"ResponseGenerator@generateResponseWithTimestampDates 357","type":0}],"stackTraceInfo":"at com.spr.rest.PublishingRestAPI.schedule(PublishingRestAPI.java:)","methodName":"schedule","methodParameter":"(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/rest/dto/publishing/PaidMessageDTO;)Ljavax/ws/rs/core/Response;","className":"com/spr/rest/PublishingRestAPI","title":"PublishingRestAPI@schedule "}]
+[
+  {
+    "noDragging": "true",
+    "children": [
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.isDuplicateRequest(PublishingUtils.java:2533)",
+            "methodName": "isDuplicateRequest",
+            "methodParameter": "(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/ops/partners/PartnerService;)Z",
+            "className": "com/spr/ops/publishing/util/PublishingUtils",
+            "title": "PublishingUtils@isDuplicateRequest 2533",
+            "type": 0
+          }
+        ],
+        "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.checkDuplicateRequest(PublishingUtils.java:342)",
+        "methodName": "checkDuplicateRequest",
+        "methodParameter": "(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/ops/partners/PartnerService;)V",
+        "className": "com/spr/ops/publishing/util/PublishingUtils",
+        "title": "PublishingUtils@checkDuplicateRequest 342",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "stackTraceInfo": "at com.spr.validation.ValidationServiceImpl.validate(ValidationServiceImpl.java:)",
+            "methodName": "validate",
+            "methodParameter": "(Ljava/lang/Object;)V",
+            "className": "com/spr/validation/ValidationServiceImpl",
+            "title": "ValidationServiceImpl@validate ",
+            "type": 3
+          }
+        ],
+        "stackTraceInfo": "at com.spr.validation.ValidationService.validate(ValidationService.java:346)",
+        "methodName": "validate",
+        "methodParameter": "(Ljava/lang/Object;)V",
+        "className": "com/spr/validation/ValidationService",
+        "title": "ValidationService@validate 346",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.security.content.service.ContentScanServiceImpl.isUrlSecurityScanEnabled(ContentScanServiceImpl.java:90)",
+                    "methodName": "isUrlSecurityScanEnabled",
+                    "methodParameter": "()Z",
+                    "className": "com/spr/security/content/service/ContentScanServiceImpl",
+                    "title": "ContentScanServiceImpl@isUrlSecurityScanEnabled 90",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.security.content.service.ContentScanServiceImpl.checkAndReturnUnsafeUrls(ContentScanServiceImpl.java:91)",
+                    "methodName": "checkAndReturnUnsafeUrls",
+                    "methodParameter": "(Ljava/lang/String;)Ljava/util/List;",
+                    "className": "com/spr/security/content/service/ContentScanServiceImpl",
+                    "title": "ContentScanServiceImpl@checkAndReturnUnsafeUrls 91",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.security.content.service.ContentScanServiceImpl.checkAndReturnUnsafeUrlsIfPropertyEnabled(ContentScanServiceImpl.java:)",
+                "methodName": "checkAndReturnUnsafeUrlsIfPropertyEnabled",
+                "methodParameter": "(Ljava/lang/String;)Ljava/util/List;",
+                "className": "com/spr/security/content/service/ContentScanServiceImpl",
+                "title": "ContentScanServiceImpl@checkAndReturnUnsafeUrlsIfPropertyEnabled ",
+                "type": 3
+              }
+            ],
+            "stackTraceInfo": "at com.spr.security.content.service.ContentScanService.checkAndReturnUnsafeUrlsIfPropertyEnabled(ContentScanService.java:1239)",
+            "methodName": "checkAndReturnUnsafeUrlsIfPropertyEnabled",
+            "methodParameter": "(Ljava/lang/String;)Ljava/util/List;",
+            "className": "com/spr/security/content/service/ContentScanService",
+            "title": "ContentScanService@checkAndReturnUnsafeUrlsIfPropertyEnabled 1239",
+            "type": 0
+          }
+        ],
+        "stackTraceInfo": "at com.spr.rest.PublishingRestAPI.scanCommentText(PublishingRestAPI.java:349)",
+        "methodName": "scanCommentText",
+        "methodParameter": "(Ljava/lang/String;)V",
+        "className": "com/spr/rest/PublishingRestAPI",
+        "title": "PublishingRestAPI@scanCommentText 349(3)",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.beans.universal.publishing.ChannelSpecificMessageData.newChannelSpecificData(ChannelSpecificMessageData.java:4076)",
+                    "methodName": "newChannelSpecificData",
+                    "methodParameter": "(Ljava/lang/Object;Lcom/spr/enums/ChannelType;Ljava/lang/Long;)Lcom/spr/beans/universal/publishing/ChannelSpecificMessageData;",
+                    "className": "com/spr/beans/universal/publishing/ChannelSpecificMessageData",
+                    "title": "ChannelSpecificMessageData@newChannelSpecificData 4076",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.addCommonAdditionalIfMissing(PublishingUtils.java:4115)",
+                "methodName": "addCommonAdditionalIfMissing",
+                "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Map;",
+                "className": "com/spr/ops/publishing/util/PublishingUtils",
+                "title": "PublishingUtils@addCommonAdditionalIfMissing 4115",
+                "type": 0
+              }
+            ],
+            "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.addVersionHeaderInMessageDTO(PublishingUtils.java:4095)",
+            "methodName": "addVersionHeaderInMessageDTO",
+            "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Ljava/lang/String;Ljava/lang/String;)V",
+            "className": "com/spr/ops/publishing/util/PublishingUtils",
+            "title": "PublishingUtils@addVersionHeaderInMessageDTO 4095",
+            "type": 0
+          }
+        ],
+        "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.addClientDetails(PublishingUtils.java:352)",
+        "methodName": "addClientDetails",
+        "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Ljavax/servlet/http/HttpServletRequest;)V",
+        "className": "com/spr/ops/publishing/util/PublishingUtils",
+        "title": "PublishingUtils@addClientDetails 352",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.util.OutboundMessageXSSHelper.isBlogOrEmail(OutboundMessageXSSHelper.java:60)",
+                    "methodName": "isBlogOrEmail",
+                    "methodParameter": "(Lcom/spr/enums/ChannelType;Ljava/lang/Long;)Z",
+                    "className": "com/spr/ops/publishing/util/OutboundMessageXSSHelper",
+                    "title": "OutboundMessageXSSHelper@isBlogOrEmail 60(4)",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanContent(OutboundMessageXSSHelper.java:60)",
+                    "methodName": "cleanContent",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Content;Z)V",
+                    "className": "com/spr/ops/publishing/util/OutboundMessageXSSHelper",
+                    "title": "OutboundMessageXSSHelper@cleanContent 60(5)",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanTaxonomy(OutboundMessageXSSHelper.java:62)",
+                    "methodName": "cleanTaxonomy",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Taxonomy;)V",
+                    "className": "com/spr/ops/publishing/util/OutboundMessageXSSHelper",
+                    "title": "OutboundMessageXSSHelper@cleanTaxonomy 62(2)",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.util.OutboundMessageXSSHelper.cleanXSS(OutboundMessageXSSHelper.java:1333)",
+                "methodName": "cleanXSS",
+                "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)V",
+                "className": "com/spr/ops/publishing/util/OutboundMessageXSSHelper",
+                "title": "OutboundMessageXSSHelper@cleanXSS 1333",
+                "type": 0
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageFactory.createPostsForPreview(OutboundMessageFactory.java:1108)",
+                    "methodName": "createPostsForPreview",
+                    "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/List;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageFactory",
+                    "title": "OutboundMessageFactory@createPostsForPreview 1108",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.poster.PosterResponse.successResponse(PosterResponse.java:1116)",
+                    "methodName": "successResponse",
+                    "methodParameter": "(Ljava/lang/String;Ljava/lang/Object;)Lcom/spr/ops/publishing/poster/PosterResponse;",
+                    "className": "com/spr/ops/publishing/poster/PosterResponse",
+                    "title": "PosterResponse@successResponse 1116(3)",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.poster.OutboundPosterService.postProcess(OutboundPosterService.java:1116)",
+                    "methodName": "postProcess",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Post;Lcom/spr/ops/publishing/poster/PosterResponse;)V",
+                    "className": "com/spr/ops/publishing/poster/OutboundPosterService",
+                    "title": "OutboundPosterService@postProcess 1116(4)",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createFanMessage(OutboundMessageServiceImpl.java:1336)",
+                "methodName": "createFanMessage",
+                "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;",
+                "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                "title": "OutboundMessageServiceImpl@createFanMessage 1336",
+                "type": 0
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageFactoryImpl.createMessage(OutboundMessageFactoryImpl.java:)",
+                    "methodName": "createMessage",
+                    "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Status;)Lcom/spr/beans/universal/publishing/Message;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageFactoryImpl",
+                    "title": "OutboundMessageFactoryImpl@createMessage ",
+                    "type": 3
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageFactory.createMessage(OutboundMessageFactory.java:1341)",
+                "methodName": "createMessage",
+                "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Status;)Lcom/spr/beans/universal/publishing/Message;",
+                "className": "com/spr/ops/publishing/service/OutboundMessageFactory",
+                "title": "OutboundMessageFactory@createMessage 1341",
+                "type": 0
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.OutboundMessageValidatorImpl.validateNewMessageForPublishing(OutboundMessageValidatorImpl.java:)",
+                    "methodName": "validateNewMessageForPublishing",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Message;)V",
+                    "className": "com/spr/ops/publishing/OutboundMessageValidatorImpl",
+                    "title": "OutboundMessageValidatorImpl@validateNewMessageForPublishing ",
+                    "type": 3
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.OutboundMessageValidator.validateNewMessageForPublishing(OutboundMessageValidator.java:1343)",
+                "methodName": "validateNewMessageForPublishing",
+                "methodParameter": "(Lcom/spr/beans/universal/publishing/Message;)V",
+                "className": "com/spr/ops/publishing/OutboundMessageValidator",
+                "title": "OutboundMessageValidator@validateNewMessageForPublishing 1343",
+                "type": 0
+              },
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessageInTransaction(OutboundMessageServiceImpl.java:3586)",
+                    "methodName": "createAndScheduleMessageInTransaction",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Message;Ljava/util/List;Ljava/util/List;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                    "title": "OutboundMessageServiceImpl@createAndScheduleMessageInTransaction 3586",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.executeInTransaction(OutboundMessageServiceImpl.java:3586)",
+                    "methodName": "executeInTransaction",
+                    "methodParameter": "(Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;Ljava/util/Collection;Ljava/util/Collection;)Ljava/lang/Object;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                    "title": "OutboundMessageServiceImpl@executeInTransaction 3586",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessageAfterCommitCallBack(OutboundMessageServiceImpl.java:3588)",
+                    "methodName": "createAndScheduleMessageAfterCommitCallBack",
+                    "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Ljava/util/List;Ljava/util/List;Ljava/lang/Long;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                    "title": "OutboundMessageServiceImpl@createAndScheduleMessageAfterCommitCallBack 3588(2)",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.deleteApprovalTasksOnRolledBack(OutboundMessageServiceImpl.java:3589)",
+                    "methodName": "deleteApprovalTasksOnRolledBack",
+                    "methodParameter": "(Lcom/spr/beans/universal/publishing/Message;)Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;",
+                    "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                    "title": "OutboundMessageServiceImpl@deleteApprovalTasksOnRolledBack 3589",
+                    "type": 0
+                  },
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.ops.publishing.util.PublishingUtils.deleteAdditionalPropertiesOnRolledBack(PublishingUtils.java:3589)",
+                    "methodName": "deleteAdditionalPropertiesOnRolledBack",
+                    "methodParameter": "()Lcom/spr/ops/publishing/service/AbstractOutboundMessageService$Callback;",
+                    "className": "com/spr/ops/publishing/util/PublishingUtils",
+                    "title": "PublishingUtils@deleteAdditionalPropertiesOnRolledBack 3589(2)",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.doCreateAndSchedulePosts(OutboundMessageServiceImpl.java:1345)",
+                "methodName": "doCreateAndSchedulePosts",
+                "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;Lcom/spr/beans/universal/publishing/Message;)Ljava/util/Collection;",
+                "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+                "title": "OutboundMessageServiceImpl@doCreateAndSchedulePosts 1345",
+                "type": 0
+              }
+            ],
+            "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageServiceImpl.createAndScheduleMessage(OutboundMessageServiceImpl.java:)",
+            "methodName": "createAndScheduleMessage",
+            "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;",
+            "className": "com/spr/ops/publishing/service/OutboundMessageServiceImpl",
+            "title": "OutboundMessageServiceImpl@createAndScheduleMessage ",
+            "type": 3
+          }
+        ],
+        "stackTraceInfo": "at com.spr.ops.publishing.service.OutboundMessageService.createAndScheduleMessage(OutboundMessageService.java:354)",
+        "methodName": "createAndScheduleMessage",
+        "methodParameter": "(Lcom/spr/ops/publishing/dto/MessageDTO;)Ljava/util/Collection;",
+        "className": "com/spr/ops/publishing/service/OutboundMessageService",
+        "title": "OutboundMessageService@createAndScheduleMessage 354",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "stackTraceInfo": "at com.spr.util.AdUtils.generateId(AdUtils.java:1225)",
+            "methodName": "generateId",
+            "methodParameter": "()Ljava/lang/String;",
+            "className": "com/spr/util/AdUtils",
+            "title": "AdUtils@generateId 1225",
+            "type": 0
+          },
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "stackTraceInfo": "at com.spr.entities.LockingConfig.<init>(LockingConfig.java:26)",
+                "methodName": "<init>",
+                "methodParameter": "()V",
+                "className": "com/spr/entities/LockingConfig",
+                "title": "LockingConfig@<init> 26",
+                "type": 0
+              }
+            ],
+            "stackTraceInfo": "at com.spr.paid.domain.QuickPublishAdConfig.<init>(QuickPublishAdConfig.java:1232)",
+            "methodName": "<init>",
+            "methodParameter": "(Ljava/lang/Long;Lcom/spr/paid/domain/adcollection/PaidInitiativePublishDTO;)V",
+            "className": "com/spr/paid/domain/QuickPublishAdConfig",
+            "title": "QuickPublishAdConfig@<init> 1232(2)",
+            "type": 0
+          }
+        ],
+        "stackTraceInfo": "at com.spr.rest.PublishingRestAPI.saveAdConfigIfExists(PublishingRestAPI.java:355)",
+        "methodName": "saveAdConfigIfExists",
+        "methodParameter": "(Ljava/util/Collection;Lcom/spr/paid/domain/adcollection/PaidInitiativePublishDTO;)V",
+        "className": "com/spr/rest/PublishingRestAPI",
+        "title": "PublishingRestAPI@saveAdConfigIfExists 355(2)",
+        "type": 0
+      },
+      {
+        "noDragging": "true",
+        "children": [
+          {
+            "noDragging": "true",
+            "children": [
+              {
+                "noDragging": "true",
+                "children": [
+                  {
+                    "noDragging": "true",
+                    "stackTraceInfo": "at com.spr.utils.core.ResponseGenerator.generateStreamingResponse(ResponseGenerator.java:211)",
+                    "methodName": "generateStreamingResponse",
+                    "methodParameter": "(Ljava/lang/Object;Ljavax/ws/rs/core/MediaType;I)Ljavax/ws/rs/core/Response;",
+                    "className": "com/spr/utils/core/ResponseGenerator",
+                    "title": "ResponseGenerator@generateStreamingResponse 211",
+                    "type": 0
+                  }
+                ],
+                "stackTraceInfo": "at com.spr.utils.core.ResponseGenerator.generateStreamingResponse(ResponseGenerator.java:115)",
+                "methodName": "generateStreamingResponse",
+                "methodParameter": "(Ljava/lang/Object;I)Ljavax/ws/rs/core/Response;",
+                "className": "com/spr/utils/core/ResponseGenerator",
+                "title": "ResponseGenerator@generateStreamingResponse 115",
+                "type": 0
+              }
+            ],
+            "stackTraceInfo": "at com.spr.utils.core.ResponseGenerator.generateResponseWithTimestampDates(ResponseGenerator.java:83)",
+            "methodName": "generateResponseWithTimestampDates",
+            "methodParameter": "(Ljava/lang/Object;Ljavax/ws/rs/core/MediaType;I)Ljavax/ws/rs/core/Response;",
+            "className": "com/spr/utils/core/ResponseGenerator",
+            "title": "ResponseGenerator@generateResponseWithTimestampDates 83",
+            "type": 0
+          }
+        ],
+        "stackTraceInfo": "at com.spr.utils.core.ResponseGenerator.generateResponseWithTimestampDates(ResponseGenerator.java:357)",
+        "methodName": "generateResponseWithTimestampDates",
+        "methodParameter": "(Ljava/lang/Object;)Ljavax/ws/rs/core/Response;",
+        "className": "com/spr/utils/core/ResponseGenerator",
+        "title": "ResponseGenerator@generateResponseWithTimestampDates 357",
+        "type": 0
+      }
+    ],
+    "stackTraceInfo": "at com.spr.rest.PublishingRestAPI.schedule(PublishingRestAPI.java:)",
+    "methodName": "schedule",
+    "methodParameter": "(Ljavax/servlet/http/HttpServletRequest;Lcom/spr/rest/dto/publishing/PaidMessageDTO;)Ljavax/ws/rs/core/Response;",
+    "className": "com/spr/rest/PublishingRestAPI",
+    "title": "PublishingRestAPI@schedule "
+  }
+]

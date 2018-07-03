@@ -28,6 +28,7 @@ const previousRootClassNameKey="previousRootClassName"
 const previousRootMethodNameKey="previousRootMethodName"
 const previousRootMethodParameterKey="previousRootMethodParameter"
 const previousRootstackTraceInfoKey="previousRootstackTraceInfo"
+const previousAllowedChunkScoreKey="previousAllowedChunkScore"
 const maxDepth = 100;
 
 let previousStackTrace = JSON.parse(window.sessionStorage.getItem(stackTraceKeyName))
@@ -38,6 +39,7 @@ let previousRootClassName = JSON.parse(window.sessionStorage.getItem(previousRoo
 let previousRootMethodName = JSON.parse(window.sessionStorage.getItem(previousRootMethodNameKey))
 let previousRootMethodParameter = JSON.parse(window.sessionStorage.getItem(previousRootMethodParameterKey))
 let previousRootstackTraceInfo = JSON.parse(window.sessionStorage.getItem(previousRootstackTraceInfoKey))
+let previousAllowedChunkScore = window.sessionStorage.getItem(previousAllowedChunkScoreKey)
 
 const publishingRestApiFlow = 'publishingRestApiFlow'
 const posterJobFlow = 'posterJobFlow'
@@ -75,7 +77,8 @@ class App extends Component {
       className : previousRootClassName.length>0?previousRootClassName[previousRootClassName.length-1]:'',
       methodName : previousRootMethodName.length>0?previousRootMethodName[previousRootMethodName.length-1]:'',
       methodParameter : previousRootMethodParameter.length>0?previousRootMethodParameter[previousRootMethodParameter.length-1]:'',
-      stackTraceInfo : previousRootstackTraceInfo.length>0?previousRootstackTraceInfo[previousRootstackTraceInfo.length-1]:''
+      stackTraceInfo : previousRootstackTraceInfo.length>0?previousRootstackTraceInfo[previousRootstackTraceInfo.length-1]:'',
+      allowedChunkScore : previousAllowedChunkScore==null&&previousAllowedChunkScore=='null'?previousAllowedChunkScore:0,
     };
 
     this.updateTreeData = this.updateTreeData.bind(this);
@@ -121,7 +124,8 @@ class App extends Component {
       className,
       methodParameter,
       methodName,
-      stackTraceInfo
+      stackTraceInfo,
+      allowedChunkScore
     } = this.state;
 
 
@@ -290,7 +294,7 @@ class App extends Component {
         methodName="'"+methodName+"'"
       } 
       //console.log("t1")
-      var {channelName, maxDepth, flow} = this.state;
+      var {channelName, maxDepth, flow, allowedChunkScore} = this.state;
       
       if (channelName==null || channelName.length==0 || maxDepth==null){
         global.alert("channel name required")
@@ -306,6 +310,10 @@ class App extends Component {
 
       if (maxDepth.length>0){
         window.sessionStorage.setItem(previousDepthKeyName,maxDepth)
+      }
+
+      if (allowedChunkScore.length>0){
+        window.sessionStorage.setItem(previousAllowedChunkScoreKey,allowedChunkScore)
       }
       //console.log("t3")
       const xmlhttp = new XMLHttpRequest();
@@ -324,7 +332,8 @@ class App extends Component {
         methodParameter,
         channelName,
         maxDepth,
-        flow
+        flow, 
+        allowedChunkScore
       }));
     }
 
@@ -430,6 +439,13 @@ class App extends Component {
            value={maxDepth}
           onChange={event =>
             this.setState({ maxDepth: event.target.value })
+          }/>
+
+          Alllowed Chunk Score:
+           <input type="number" className='maxdepth' name="chunkScore"
+           value={allowedChunkScore}
+          onChange={event =>
+            this.setState({ allowedChunkScore: event.target.value })
           }/>
           
             <button onClick={viewpublishingRestApiFlow} type="button" ><b>View PublishingRestApi Flow</b></button>
