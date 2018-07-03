@@ -10,6 +10,7 @@ module.exports = {
             channelName,
             maxDepth,
             flow,
+            allowedChunkScore
         } = req.body;
         let rootChangeRequest=false
         if (className!=null&&(className.length>0 || methodName.length>0 || methodParameter.length>0 )){
@@ -28,11 +29,11 @@ module.exports = {
         if (rootChangeRequest){
             changeRootCommand='changeRoot'
             command1 = 'chmod +x controllers/runAnalyseMethod.sh'
-            command2 = './controllers/runAnalyseMethod.sh'+' '+changeRootCommand+' '+channelName+' '+flow+' '+maxDepth+' '+className+' '+methodName+' '+methodParameter
+            command2 = './controllers/runAnalyseMethod.sh'+' '+changeRootCommand+' '+channelName+' '+flow+' '+maxDepth+' '+className+' '+methodName+' '+methodParameter + ' ' + allowedChunkScore 
         } else {
             makeGraphCommand='makeGraph'
             command1 = 'chmod +x controllers/runAnalyseMethod.sh'
-            command2 = './controllers/runAnalyseMethod.sh'+' '+makeGraphCommand+' '+channelName+' '+flow+' '+maxDepth
+            command2 = './controllers/runAnalyseMethod.sh'+' '+makeGraphCommand+' '+channelName+' '+flow+' '+maxDepth+ ' ' + allowedChunkScore 
         }
         console.log(command2)
         exec(command1)
