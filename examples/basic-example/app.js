@@ -236,7 +236,7 @@ class App extends Component {
           var stackTrace=previousStackTrace
           for (let i=0;i<stackTrace.length;i++){
               if (stackTrace[i]==laststackTraceInfo){
-                stackTrace=stackTrace.slice(i+1,stackTrace.length)
+                stackTrace=stackTrace.slice(i,stackTrace.length)
                 break;
               }
           }

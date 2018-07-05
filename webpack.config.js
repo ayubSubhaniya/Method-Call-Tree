@@ -5,7 +5,7 @@ const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+const Dotenv = require('dotenv-webpack');
 const target = process.env.TARGET || 'umd';
 
 const styleLoader = {
