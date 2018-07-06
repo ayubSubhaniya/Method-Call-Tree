@@ -16,9 +16,9 @@ import '../shared/favicon/safari-pinned-tab.svg';
 import {nodeAtIndex} from './../../src/utils/tree-data-utils'
 
 
-const HOST_NAME = "http://localhost"
+const HOST_NAME = "https://nqa-internal-tools.sprinklr.com/"
 const PORT = "8081"
-const url = HOST_NAME+":"+PORT+"/analyseMethod"
+const url = HOST_NAME+"/analyseMethod"
 
 const stackTraceKeyName="stackTrace"
 const previousChannelKeyName="previousChannel"
