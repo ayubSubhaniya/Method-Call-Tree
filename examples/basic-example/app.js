@@ -448,11 +448,11 @@ class App extends Component {
             this.setState({ allowedChunkScore: event.target.value })
           }/>
           
-            <button onClick={viewpublishingRestApiFlow} type="button" ><b>View PublishingRestApi Flow</b></button>
-            <button onClick={viewOutboundPreProcessorFlow} type="button" ><b>View OutboundPreProcessor Flow</b></button>
-            <button onClick={viewPosterJobFlow} type="button" ><b>View PosterJob Flow</b></button>
-            <button onClick={viewBaseSprJobFlow} type="button" ><b>View BaseSprJob Flow</b></button>
-            <button onClick={moveToPreviousRoot} type="button"><b>Root tree to previous root</b></button>
+            <button onClick={viewpublishingRestApiFlow} type="submit" ><b>View PublishingRestApi Flow</b></button>
+            <button onClick={viewOutboundPreProcessorFlow} type="submit" ><b>View OutboundPreProcessor Flow</b></button>
+            <button onClick={viewPosterJobFlow} type="submit" ><b>View PosterJob Flow</b></button>
+            <button onClick={viewBaseSprJobFlow} type="submit" ><b>View BaseSprJob Flow</b></button>
+            <button onClick={moveToPreviousRoot} type="submit"><b>Root tree to previous root</b></button>
         </form>
         </section>
 
